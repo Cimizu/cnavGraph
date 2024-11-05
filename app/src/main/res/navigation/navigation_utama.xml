@@ -58,6 +58,6 @@
         <deepLink
             android:id="@+id/deepLink2"
             android:autoVerify="true"
-            app:uri="http://paba/score/{param1}" />
+            app:uri="http://paba/score/{param1}?param2={param2}" />
     </fragment>
 </navigation>

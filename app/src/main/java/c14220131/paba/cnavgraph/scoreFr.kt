@@ -43,7 +43,10 @@ class scoreFr : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_score, container, false)
+//        return inflater.inflate(R.layout.fragment_score, container, false)
+        _binding = FragmentScoreBinding.inflate(inflater,container,false)
+        val view = binding.root
+        return view
     }
 
     companion object {

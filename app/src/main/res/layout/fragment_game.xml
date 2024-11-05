@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GameFr">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Halaman Game Fragment"
+        android:background="#F35A5A"
+        android:textColor="#FFF"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btnTopScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Score"/>
+
+</LinearLayout>

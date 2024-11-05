@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_utama"
+    app:startDestination="@id/homeFr">
+
+    <fragment
+        android:id="@+id/homeFr"
+        android:name="c14220131.paba.cnavgraph.HomeFr"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFr_to_gameFr"
+            app:destination="@id/gameFr" />
+        <action
+            android:id="@+id/action_homeFr_to_profileAct"
+            app:destination="@id/profileAct" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFr"
+        android:name="c14220131.paba.cnavgraph.GameFr"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFr_to_topscoreFr"
+            app:destination="@id/topscoreFr2" />
+    </fragment>
+    <activity
+        android:id="@+id/profileAct"
+        android:name="c14220131.paba.cnavgraph.ProfileAct"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile">
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="http://grace/profile" />
+    </activity>
+    <fragment
+        android:id="@+id/topscoreFr2"
+        android:name="c14220131.paba.cnavgraph.topscoreFr"
+        android:label="fragment_topscore"
+        tools:layout="@layout/fragment_topscore" >
+        <argument
+            android:name="topScoreName"
+            app:argType="string"
+            android:defaultValue="name" />
+        <argument
+            android:name="topScore"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFr"
+        android:name="c14220131.paba.cnavgraph.scoreFr"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score">
+        <deepLink
+            android:id="@+id/deepLink2"
+            android:autoVerify="true"
+            app:uri="http://paba/score/{param1}" />
+    </fragment>
+</navigation>
